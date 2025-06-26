@@ -1,0 +1,63 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 64px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar-links li {
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.navbar-links li:hover {
+  color: #007bff;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.icon {
+  font-size: 1.25rem;
+  color: #444;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.icon:hover {
+  color: #007bff;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* Responsive: hamburger menu mobilon */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }

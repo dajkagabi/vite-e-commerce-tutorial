@@ -29,7 +29,7 @@
 }
 
 .navbar-links li:hover {
-  color: #007bff;
+  color: red;
 }
 
 .navbar-icons {
@@ -46,7 +46,7 @@
 }
 
 .icon:hover {
-  color: #007bff;
+  color: red;
 }
 
 .hamburger {
@@ -57,7 +57,22 @@
 @media (max-width: 768px) {
   .navbar-links {
     display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 1rem 0;
+    gap: 1.5rem;
+    z-index: 100;
+  }
+  .navbar-links.open {
+    display: flex;
+    text-align: center;
   }
   .hamburger {
     display: block;
   }
+}

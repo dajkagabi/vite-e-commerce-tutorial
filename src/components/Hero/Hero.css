@@ -1,91 +1,66 @@
 .hero {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 60vh;
-  background: linear-gradient(90deg, #f8f9fa 60%, #e3e6ee 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #f5f5f7;
+  padding: 40px 20px;
 }
 
-.hero-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-  padding: 2rem 3rem;
-  gap: 3rem;
+.hero > div {
+  max-width: 600px;
+  text-align: center;
+  position: relative;
 }
 
-.hero-content {
-  flex: 1;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 0;
-  background: none;
-  box-shadow: none;
+.hero span {
+  display: inline-block;
+  color: #ff3e3e;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 800;
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 18px 0;
   color: #222;
-  margin-bottom: 1.2rem;
 }
 
-.hero-content p {
-  font-size: 1.25rem;
-  color: #444;
-  margin-bottom: 2rem;
+.hero p {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+  line-height: 1.6;
 }
 
 .btn {
-  padding: 0.8rem 2.2rem;
   background: #222;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  cursor: pointer;
+  padding: 14px 36px;
+  border-radius: 30px;
+  font-size: 1rem;
   font-weight: 600;
+  cursor: pointer;
   transition: background 0.2s;
+  margin-bottom: 24px;
 }
 
 .btn:hover {
-  background: #e63946;
+  background: #ff3e3e;
 }
 
-.hero-image {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.hero-image img {
-  width: 420px;
-  max-width: 95vw;
-  border-radius: 18px;
-  object-fit: cover;
-  box-shadow: 0 6px 32px rgba(0,0,0,0.10);
-}
 
-@media (max-width: 900px) {
-  .hero-inner {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1.5rem 1rem;
-    text-align: center;
+/* Reszponzivitás */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.6rem;
   }
-  .hero-content {
-    align-items: center;
-    text-align: center;
-  }
-  .hero-image img {
-    width: 100%;
-    max-width: 350px;
+  .hero-img {
+    max-width: 90vw;
   }
 }

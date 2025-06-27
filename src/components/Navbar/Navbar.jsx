@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faHeart, faUser, faBars } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,8 +13,12 @@ const Navbar = () => {
         <span>Shoppio</span>
       </div>
       <ul className={`navbar-links${menuOpen ? ' open' : ''}`}>
-        <li>Home</li>
-        <li>About</li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
         <li>Shop</li>
         <li>Blogs</li>
         <li>Pages</li>

@@ -6,6 +6,7 @@ import img3 from '../../assets/item3.jpg'
 import img4 from '../../assets/item-4.jpg'
 import img5 from '../../assets/item5.jpg'
 import img6 from '../../assets/item6.jpg'
+import img7 from '../../assets/item7.jpg'
 
 const products = [
   { img: img1, title: 'IMac M4', price: 'Starting price: $1299 ' },
@@ -14,6 +15,7 @@ const products = [
   { img: img4, title: 'Apple iPad ', price: 'Starting price: $799' },
   { img: img5, title: 'Magic Mouse', price: 'Starting price: $79' },
   { img: img6, title: 'AirPods', price: 'Starting price: $129' },
+  { img: img7, title: 'AirPods Max', price: 'Starting price: $704' }
 ]
 
 const Swiper = () => {

@@ -37,6 +37,18 @@
   color: #000080;
 }
 
+.navbar-links li .active {
+  text-decoration: none;
+  color: #000080;
+  background: #e0e7ff;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .navbar-icons {
   display: flex;
   align-items: center;

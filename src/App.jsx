@@ -1,15 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Display from './components/Display/Display';
 import Swiper from './components/Swiper/Swiper';
 import Article from './components/Article/Article';
 import Footer from './components/Footer/Footer';
-//import Newsletter from './components/Newsletter/Newsletter';
-
-import About from './components/About/About'; // <-- új import
+// import Newsletter from './components/Newsletter/Newsletter';
+import About from './components/About/About'; 
+import ProductList from './components/Shop/ProductList';
+import ProductDetails from './components/Shop/ProductDetails';
+import Cart from './components/Cart/Cart';
 
 const Home = () => (
   <>
@@ -29,6 +30,10 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/shop" element={<ProductList />} />
+          <Route path="/shop/:id" element={<ProductDetails />} />
+          <Route path="/cart" element={<Cart />} />
+          
         </Routes>
       </div>
       <Footer />

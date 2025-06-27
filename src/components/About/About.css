@@ -1,0 +1,65 @@
+.about-container {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 2rem 2rem;
+  font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+  color: #222;
+  line-height: 1.75;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.about-container h1 {
+  font-size: 2.75rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #111;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+}
+
+.about-container p {
+  margin-bottom: 1.5rem;
+  font-size: 1.15rem;
+  text-align: justify;
+  text-wrap: pretty;
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    max-width: 95vw;
+    padding: 1.5rem 1rem;
+  }
+  .about-container h1 {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    margin: 2rem 0.5rem;
+    padding: 1rem 0.5rem;
+    border-radius: 0;
+  }
+  .about-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .about-container p {
+    font-size: 0.98rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  .about-container {
+    padding: 0.5rem 0.2rem;
+  }
+  .about-container h1 {
+    font-size: 1.1rem;
+  }
+}

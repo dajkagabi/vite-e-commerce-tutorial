@@ -19,9 +19,15 @@ const Navbar = () => {
         <li>
           <Link to="/about">About</Link>
         </li>
-        <li>Shop</li>
-        <li>Blogs</li>
-        <li>Pages</li>
+        <li>
+        <Link to="/shop">Shop</Link>
+         </li>
+        <li>
+        <Link to="/blogs">Blogs</Link>
+        </li>
+        <li>
+        <Link to="/pages">Pages</Link>
+        </li>
       </ul>
       <div className="navbar-icons">
         <FontAwesomeIcon icon={faShoppingCart} className="icon" />

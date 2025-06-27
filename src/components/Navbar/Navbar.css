@@ -29,7 +29,7 @@
 }
 
 .navbar-links li:hover {
-  color: red;
+  color: #000080;
 }
 
 .navbar-icons {
@@ -46,14 +46,14 @@
 }
 
 .icon:hover {
-  color: red;
+  color: #000080;
 }
 
 .hamburger {
   display: none;
 }
 
-/* Responsive: hamburger menu mobilon */
+
 @media (max-width: 768px) {
   .navbar-links {
     display: none;

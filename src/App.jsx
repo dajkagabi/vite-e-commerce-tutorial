@@ -4,7 +4,7 @@ import Hero from './components/Hero/Hero';
 import Display from './components/Display/Display';
 import Swiper from './components/Swiper/Swiper';
 import Article from './components/Article/Article';
-import Newsletter from './components/Newsletter/Newsletter';
+//import Newsletter from './components/Newsletter/Newsletter';
 import Footer from './components/Footer/Footer';
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
     <Display />
     <Swiper />
     <Article />
-    <Newsletter />
+   {/* <Newsletter />*/}  
     <Footer />
     </>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Display.css'
-import display1 from '../../assets/display-1.jpg'
+import display3 from '../../assets/display-3.jpg'
 import display2 from '../../assets/display-2.jpg'
 
 const Display = () => {
@@ -14,7 +14,7 @@ const Display = () => {
         </p>
       </div>
       <div className="display-images">
-        <img src={display1} alt="Collection 1" className="display-img" />
+        <img src={display3} alt="Collection 1" className="display-img" />
         <img src={display2} alt="Collection 2" className="display-img" />
       </div>
     </div>

@@ -31,7 +31,7 @@
 
 .display-img {
   width: 420px;
-  height: 320px;
+  height: 420px;
   object-fit: cover;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);

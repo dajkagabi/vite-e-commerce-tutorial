@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../Cart/CartContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
+  const { addToCart } = useCart();
+
   return (
     <div className="product-card">
       <img
@@ -31,7 +36,11 @@ const ProductCard = ({ product }) => {
         <Link to={`/shop/${product.id}`} className="product-card-btn">
           Details
         </Link>
+          <button className="add-cart-btn" onClick={() => addToCart(product)}>
+        <FontAwesomeIcon icon={faShoppingCart} />
+      </button>
       </div>
+    
     </div>
   );
 };

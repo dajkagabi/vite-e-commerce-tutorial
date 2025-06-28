@@ -3,9 +3,13 @@ import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faHeart, faUser, faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { useCart } from '../Cart/CartContext';
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { cartItems } = useCart();
+  const total = cartItems.reduce((sum, item) => sum + item.qty, 0);
 
   return (
     <nav className="navbar">
@@ -30,7 +34,6 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="navbar-icons">
-        <FontAwesomeIcon icon={faShoppingCart} className="icon" />
         <FontAwesomeIcon icon={faHeart} className="icon" />
         <FontAwesomeIcon icon={faUser} className="icon" />
         <FontAwesomeIcon
@@ -38,6 +41,13 @@ const Navbar = () => {
           className="icon hamburger"
           onClick={() => setMenuOpen(!menuOpen)}
         />
+        {/* Kosár ikon linkkel */}
+        <Link to="/cart" className="cart-icon-wrapper">
+          <FontAwesomeIcon icon={faShoppingCart} className="icon" />
+          {total > 0 && (
+            <span className="cart-badge">{total}</span>
+          )}
+        </Link>
       </div>
     </nav>
   )

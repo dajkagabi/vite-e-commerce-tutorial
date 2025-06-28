@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from "react";
-import './CartContext.css'; 
+
 
 const CartContext = createContext();
 

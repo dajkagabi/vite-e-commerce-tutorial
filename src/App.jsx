@@ -14,6 +14,7 @@ import Cart from './components/Cart/Cart';
 import Profile from './components/Profile/Profile';
 import Blogs from './components/Blogs/Blogs';
 import Features from './components/Features/Features';
+import Favorites from './components/FavoritesContext/Favorites';
 
 const Home = () => (
   <>
@@ -40,6 +41,7 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/features" element={<Features/>} />
+          <Route path="/favorites" element={<Favorites />} />
      
           
         </Routes>

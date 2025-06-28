@@ -1,0 +1,17 @@
+.heart-icon-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -7px;
+  right: -10px;
+  background: #e63946;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  padding: 2px 4px;
+  font-weight: bold;
+  z-index: 1;
+}

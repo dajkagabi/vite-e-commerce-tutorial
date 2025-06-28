@@ -4,10 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faHeart, faUser, faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { useCart } from '../Cart/CartContext';
+import { useFavorites } from "../FavoritesContext/FavoritesContext";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { cartItems } = useCart();
+  const { favorites } = useFavorites();
   const total = cartItems.reduce((sum, item) => sum + item.qty, 0);
 
   return (
@@ -33,8 +35,12 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="navbar-icons">
-        <FontAwesomeIcon icon={faHeart} className="icon" />
-        
+        <Link to="/favorites" className="heart-icon-wrapper">
+          <FontAwesomeIcon icon={faHeart} className="icon" />
+          {favorites.length > 0 && (
+            <span className="cart-badge">{favorites.length}</span>
+          )}
+        </Link>
         <Link to="/profile">
           <FontAwesomeIcon
             icon={faUser}

@@ -3,13 +3,27 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../Cart/CartContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as solidHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
+import { useFavorites } from '../FavoritesContext/FavoritesContext';
 import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart();
+  const { toggleFavorite, isFavorite } = useFavorites();
 
   return (
     <div className="product-card">
+      <button
+        className="favorite-btn-card"
+        onClick={() => toggleFavorite(product)}
+        aria-label="Add to favorites"
+      >
+        <FontAwesomeIcon
+          icon={isFavorite(product.id) ? solidHeart : regularHeart}
+          style={{ color: isFavorite(product.id) ? '#e63946' : '#888' }}
+        />
+      </button>
       <img
         className="product-card-img"
         src={product.image}
@@ -36,11 +50,10 @@ const ProductCard = ({ product }) => {
         <Link to={`/shop/${product.id}`} className="product-card-btn">
           Details
         </Link>
-          <button className="add-cart-btn" onClick={() => addToCart(product)}>
-        <FontAwesomeIcon icon={faShoppingCart} />
-      </button>
+        <button className="add-cart-btn" onClick={() => addToCart(product)}>
+          <FontAwesomeIcon icon={faShoppingCart} />
+        </button>
       </div>
-    
     </div>
   );
 };

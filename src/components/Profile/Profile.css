@@ -1,0 +1,67 @@
+.profile-form-container {
+  max-width: 350px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 2rem 1.5rem;
+}
+
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.profile-tabs button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border 0.15s;
+}
+
+.profile-tabs button.active {
+  color: #00008b;
+  border-bottom: 2px solid #00008b;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.profile-form input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #dbeafe;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.15s;
+}
+
+.profile-form input:focus {
+  border: 1.5px solid #00008b;
+}
+
+.profile-form button[type="submit"] {
+  background: #00008b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.profile-form button[type="submit"]:hover {
+  background: #1769aa;
+}

@@ -5,7 +5,6 @@ import { faShoppingCart, faHeart, faUser, faBars } from '@fortawesome/free-solid
 import { Link } from 'react-router-dom';
 import { useCart } from '../Cart/CartContext';
 
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { cartItems } = useCart();
@@ -24,24 +23,29 @@ const Navbar = () => {
           <Link to="/about">About</Link>
         </li>
         <li>
-        <Link to="/shop">Shop</Link>
-         </li>
-        <li>
-        <Link to="/blogs">Blogs</Link>
+          <Link to="/shop">Shop</Link>
         </li>
         <li>
-        <Link to="/pages">Pages</Link>
+          <Link to="/blogs">Blogs</Link>
+        </li>
+        <li>
+          <Link to="/pages">Pages</Link>
         </li>
       </ul>
       <div className="navbar-icons">
         <FontAwesomeIcon icon={faHeart} className="icon" />
-        <FontAwesomeIcon icon={faUser} className="icon" />
+        
+        <Link to="/profile">
+          <FontAwesomeIcon
+            icon={faUser}
+            className="icon profile-icon"
+          />
+        </Link>
         <FontAwesomeIcon
           icon={faBars}
           className="icon hamburger"
           onClick={() => setMenuOpen(!menuOpen)}
         />
-        {/* Kosár ikon linkkel */}
         <Link to="/cart" className="cart-icon-wrapper">
           <FontAwesomeIcon icon={faShoppingCart} className="icon" />
           {total > 0 && (

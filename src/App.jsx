@@ -11,6 +11,7 @@ import About from './components/About/About';
 import ProductList from './components/Shop/ProductList';
 import ProductDetails from './components/Shop/ProductDetails';
 import Cart from './components/Cart/Cart';
+import Profile from './components/Profile/Profile';
 
 const Home = () => (
   <>
@@ -33,6 +34,8 @@ const App = () => {
           <Route path="/shop" element={<ProductList />} />
           <Route path="/shop/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/profile" element={<Profile />} />
+        
           
         </Routes>
       </div>

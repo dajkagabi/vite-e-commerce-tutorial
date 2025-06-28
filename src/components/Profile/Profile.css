@@ -63,5 +63,41 @@
 }
 
 .profile-form button[type="submit"]:hover {
-  background: #1769aa;
+  background: #00008b;
+}
+
+.forgot-password-row {
+  text-align: right;
+  margin-bottom: 0.5rem;
+}
+
+.forgot-password-link {
+  color: red;
+  cursor: pointer;
+  font-size: 0.97rem;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.forgot-password-link:hover {
+  color: #00008b;
+}
+
+.terms-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.97rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.terms-label a {
+  color: #00008b;
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+
+.terms-label a:hover {
+  color: red;
 }

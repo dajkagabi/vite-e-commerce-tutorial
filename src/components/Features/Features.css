@@ -1,0 +1,36 @@
+.features-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+}
+
+.features-list li {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f5f7fa;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.feature-title {
+  display: block;
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: #00008b;
+  margin-bottom: 0.3rem;
+}
+
+.feature-desc {
+  color: #444;
+  font-size: 1rem;
+}

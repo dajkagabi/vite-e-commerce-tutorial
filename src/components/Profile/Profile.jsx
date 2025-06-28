@@ -4,7 +4,7 @@ import './Profile.css';
 const Profile = () => {
   const [tab, setTab] = useState('login');
   const [loginData, setLoginData] = useState({ email: '', password: '' });
-  const [registerData, setRegisterData] = useState({ email: '', password: '', name: '' });
+  const [registerData, setRegisterData] = useState({ email: '', password: '', name: '', terms: false });
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -13,7 +13,15 @@ const Profile = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
+    if (!registerData.terms) {
+      alert('You must accept the Terms and Conditions.');
+      return;
+    }
     alert('Register: ' + registerData.email);
+  };
+
+  const handleForgotPassword = () => {
+    alert('Forgot password clicked!');
   };
 
   return (
@@ -48,6 +56,11 @@ const Profile = () => {
             onChange={e => setLoginData({ ...loginData, password: e.target.value })}
             required
           />
+          <div className="forgot-password-row">
+            <span className="forgot-password-link" onClick={handleForgotPassword}>
+              Forgot password?
+            </span>
+          </div>
           <button type="submit">Login</button>
         </form>
       )}
@@ -74,6 +87,15 @@ const Profile = () => {
             onChange={e => setRegisterData({ ...registerData, password: e.target.value })}
             required
           />
+          <label className="terms-label">
+            <input
+              type="checkbox"
+              checked={registerData.terms}
+              onChange={e => setRegisterData({ ...registerData, terms: e.target.checked })}
+              required
+            />
+            I accept the <a href="#" target="_blank" rel="noopener noreferrer">Terms and Conditions.</a>
+          </label>
           <button type="submit">Register</button>
         </form>
       )}

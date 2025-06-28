@@ -29,7 +29,7 @@ const Navbar = () => {
           <Link to="/blogs">Blogs</Link>
         </li>
         <li>
-          <Link to="/pages">Pages</Link>
+          <Link to="/features">Features</Link>
         </li>
       </ul>
       <div className="navbar-icons">

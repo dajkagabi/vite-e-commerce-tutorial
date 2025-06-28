@@ -12,6 +12,8 @@ import ProductList from './components/Shop/ProductList';
 import ProductDetails from './components/Shop/ProductDetails';
 import Cart from './components/Cart/Cart';
 import Profile from './components/Profile/Profile';
+import Blogs from './components/Blogs/Blogs';
+import Features from './components/Features/Features';
 
 const Home = () => (
   <>
@@ -19,6 +21,7 @@ const Home = () => (
     <Display />
     <Swiper />
     <Article />
+    
     {/* <Newsletter /> */}
   </>
 );
@@ -35,7 +38,9 @@ const App = () => {
           <Route path="/shop/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />
-        
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/features" element={<Features/>} />
+     
           
         </Routes>
       </div>

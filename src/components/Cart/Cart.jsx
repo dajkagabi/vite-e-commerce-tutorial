@@ -5,7 +5,7 @@ import "./Cart.css";
 const Cart = () => {
   const { cartItems, increaseQty, decreaseQty } = useCart();
 
-  if (cartItems.length === 0) return <div className="cart-empty">A kosár üres.</div>;
+  if (cartItems.length === 0) return <div className="cart-empty">The cart is empty</div>;
 
   const total = cartItems.reduce((sum, item) => sum + item.price * item.qty, 0);
 
